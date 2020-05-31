@@ -106,8 +106,7 @@ Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officer
 Firing the officers involved is not enough, and giving these officers paid leave is beyond inappropriate. Justice for George Floyd will not be served until these officers are taken to court and charged appropriately for their crimes.
 
 Sincerely,
-
-${firstName} ${lastName}`
+${firstName}${lastName}`
     },
 
     police_department_3: {
@@ -259,6 +258,7 @@ const MoreWaysToHelp = () => (
                 <li><a href="https://www.gofundme.com/f/georgefloyd">🙏 Donate to the Official George Floyd Memorial Fund</a></li>
                 <li><a href="https://minnesotafreedomfund.org/">💸 Pay protestor’s bail with the Minnesota Freedom Fund</a></li>
                 <li><a href="https://blacklivesmatter.com/">📋 Donate or volunteer with Black Lives Matter</a></li>
+                <li> <a href="https://bailfunds.github.io/">🌎 A list of bail funds by location</a></li>
                 <li> <a href="https://blacklivesmatters.carrd.co/">📖 A great list of petitions, donations, and other resources</a></li>
             </ul>
         </div>
@@ -280,7 +280,7 @@ const App = () => (
             <section>
                 <p><strong>We must hold the Minneapolis criminal justice system accountable and demand justice for George Floyd, a Black man murdered in cold blood by four cops in the Minneapolis Police Department.</strong> <br /><br />With this website, you can quickly create personalized emails to send to the Minneapolis District Attorney and Minneapolis Police Department—an easy way to stand in solidarity with Floyd and the BLM movement.</p>
                 <p>
-                    None of the information entered here will ever be stored! All processing is done <a href="https://www.cloudflare.com/learning/serverless/glossary/client-side-vs-server-side/">client-side</a>.
+                    None of the information entered here will ever be stored. All processing is done <a href="https://www.cloudflare.com/learning/serverless/glossary/client-side-vs-server-side/">client-side</a>.
                 </p>
             </section>
             <EmailData />
