@@ -255,7 +255,7 @@ const MoreWaysToHelp = () => (
         <div>
             <h3>If you’re on your phone or an Apple computer with a US number:</h3>
             <ul>
-                <li><a href="sms:+55156&body=FLOYD">Text FLOYD to 5516</a></li>
+                <li><a href="sms:+55156&body=FLOYD">Text FLOYD to 55156</a></li>
                 <li><a href="sms:+668366&body=JUSTICE">Text JUSTICE to 668366</a></li>
             </ul>
         </div>
