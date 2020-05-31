@@ -278,9 +278,12 @@ const Footer = () => (
     </section>
 )
 
+const Alert = () => <div className="alert">UPDATE: Some emails may not send as Minneapolis servers experience disruption.</div>
+
 const App = () => (
     <div className="center">
         <header>
+            <Alert />
             <h1>✊ #BlackLivesMatter</h1>
         </header>
         <main>
