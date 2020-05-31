@@ -1,0 +1,216 @@
+<html lang="en">
+    <head>
+        <title>#blacklivesmatter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <style>
+
+            * {
+                box-sizing: border-box;
+
+            }
+            body, html {
+                background-color: #fff;
+
+                background: #fff;
+                min-height: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                font-family: Open Sans, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                font-weight: 400;
+                font-style: normal;
+                -webkit-text-size-adjust: 100%;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-rendering: optimizeLegibility;
+                -webkit-font-feature-settings: "pnum";
+                font-feature-settings: "pnum";
+                font-variant-numeric: proportional-nums;
+
+                font-size: 16px;
+                line-height: 1.25;
+            }
+
+            .center {
+                max-width: 640px;
+                width: 100%;
+                padding: 0 20px;
+                margin: 0 auto;
+            }
+
+            .email-preview__body {
+                white-space: break-spaces;
+                padding: 20px;
+                border: 1px solid #b7b7b7;
+                margin: 5px 0 15px 0;
+                border-radius: 6px;
+            }
+
+            .email-form > label {
+                display: block;
+                font-weight: 600;
+            }
+
+            .input-item {
+                display: block;
+                font: inherit;
+                font-weight: normal;
+                padding: 5px 10px;
+                margin: 5px 0 15px;
+                border: 1px solid #b7b7b7;
+                border-radius: 6px;
+                max-width: 300px;
+                width: 100%;
+                height: 45px;
+                background-color: white;
+            }
+
+
+
+            .more-ways-to-help {
+                margin-top: 100px;
+            }
+
+            .preview-for > * {
+                display: block;
+                padding: 10px;
+                border: 1px solid;
+                margin: 10px 0;
+                border-radius: 6px;
+                width: 300px;
+                border-color: #b7b7b7;
+            }
+
+            .optional {
+                margin-left: 5px;
+            }
+
+            input[type="radio"] {
+                margin-right: 15px;
+            }
+
+
+            h1 {
+                font-size: 42px;
+            }
+
+
+
+            h2, h3, h4, h5 {
+                margin-bottom: 5px;
+            }
+
+            .button {
+                min-width: 150px;
+                text-decoration: none;
+                padding: 10px 30px;
+                font: inherit;
+                cursor: pointer;
+                display: block;
+                height: 45px;
+                margin-bottom: 10px;
+                border: none;
+                background: #4d42f4;
+                color: #fff;
+                border-radius: 6px;
+                font-weight: 600;
+                margin-right: 10px;
+            }
+
+            a {
+                color: #4d42f4;
+            }
+
+            .button-holder {
+                display: flex;
+            }
+            .send-button-container a {
+                text-decoration: none;
+            }
+
+            .footer {
+                color: #484848;
+                font-size: 13px;
+                margin: 100px 0;
+            }
+
+            @media only screen and (max-width: 420px) {
+                h1 {
+                    font-size: 16px;
+                }
+                .input-item {
+                    max-width: 100%;
+                    width: 100%;
+                }
+
+                .button {
+                    display: block;
+                    width: 100%;
+                }
+
+                .button-holder {
+                    display: block;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            const ALL_US_STATES=["Alaska","Alabama","Arkansas","American Samoa","Arizona","California","Colorado","Connecticut","District of Columbia","Delaware","Florida","Georgia","Guam","Hawaii","Iowa","Idaho","Illinois","Indiana","Kansas","Kentucky","Louisiana","Massachusetts","Maryland","Maine","Michigan","Minnesota","Missouri","Mississippi","Montana","North Carolina"," North Dakota","Nebraska","New Hampshire","New Jersey","New Mexico","Nevada","New York","Ohio","Oklahoma","Oregon","Pennsylvania","Puerto Rico","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Virginia","Virgin Islands","Vermont","Washington","Wisconsin","West Virginia","Wyoming"],EMAIL_DATA={district_attorney:{title:"Minneapolis District Attorney",to_person:"Mr. Mike Freeman",email:"citizeninfo@hennepin.us",body:({firstName:a,lastName:b,city:c,state:d})=>`To Whom It May Concern:
+
+My name is ${a}${b}. I live ${c}, ${d}, but I am appalled enough about recent events in Minneapolis to take the time to write in.
+
+I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four Minneapolis Police Department offices on May 25, 2020. This incident was caught on video by multiple sources, including but not limited to the one linked, all of which clearly prove the guilt of the officers in question.
+
+Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officers, including Tou Thao (badge #1087) are accomplices to this vile hate crime.
+
+Firing the officers involved is not enough, and giving these officers paid leave is beyond inappropriate. Justice for George Floyd will not be served until these officers are taken to court and charged appropriately for their crimes.
+
+Sincerely,
+${a}${b}`},police_department_1:{title:"Minneapolis Police Department",to_person:"Whom It May Concern",email:"police@minneapolismn.gov",body:({firstName:a,lastName:b,city:c,state:d})=>`To Whom It May Concern:
+
+My name is ${a}${b}. I live ${c}, ${d}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
+
+I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your offices on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
+
+Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officers, including Tou Thao (badge #1087) are accomplices to this vile hate crime.
+
+Firing the officers involved is not enough, and giving these officers paid leave is beyond inappropriate. Justice for George Floyd will not be served until these officers are taken to court and charged appropriately for their crimes.
+
+Sincerely,
+${a}${b}`},police_department_2:{title:"Minneapolis 311",to_person:"Whom It May Concern",email:"minneapolis311@minneapolismn.gov",body:({firstName:a,lastName:b,city:c,state:d})=>`To Whom It May Concern:
+
+My name is ${a}${b}. I live ${c}, ${d}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
+
+I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your offices on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
+
+Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officers, including Tou Thao (badge #1087) are accomplices to this vile hate crime.
+
+Firing the officers involved is not enough, and giving these officers paid leave is beyond inappropriate. Justice for George Floyd will not be served until these officers are taken to court and charged appropriately for their crimes.
+
+Sincerely,
+
+${a} ${b}`},police_department_3:{title:"Minneapolis Police Review",to_person:"Whom It May Concern",email:"policereview@minneapolismn.gov",body:({firstName:a,lastName:b,city:c,state:d})=>`To Whom It May Concern:
+
+My name is ${a}${b}. I live ${c}, ${d}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
+
+I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your offices on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
+
+Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officers, including Tou Thao (badge #1087) are accomplices to this vile hate crime.
+
+Firing the officers involved is not enough, and giving these officers paid leave is beyond inappropriate. Justice for George Floyd will not be served until these officers are taken to court and charged appropriately for their crimes.
+
+Sincerely,
+${a}${b}`}},buildGmailLink=({email:a,body:b,subject:c})=>`https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${a}&subject=${c}&body=${encodeURIComponent(b)}`,buildMailTo=({email:a,body:b,subject:c})=>`mailto:${a}.com?subject=${c}&body=${encodeURIComponent(b)}`,emailDataEntries=Object.entries(EMAIL_DATA),applyPreview=(a,{firstName:b,lastName:c,city:d,state:e})=>EMAIL_DATA[a]&&EMAIL_DATA[a].body({firstName:b||"FIRST NAME",lastName:c?` ${c}`:"",city:d||"CITY",state:e||"state"}),EmailData=()=>{const[a,b]=React.useState({state:"Alaska"}),{firstName:c,lastName:d,city:e,state:f}=a,[g,h]=React.useState(null),[i,j]=React.useState(0),k=({target:{name:a,value:c}})=>b(b=>({...b,[a]:c})),l=a=>{1===i&&j(2),h(a)},m=`I, ${c||"FIRST NAME"}, demand justice for George Floyd`,n=applyPreview(g,a),o=EMAIL_DATA[g]&&EMAIL_DATA[g].email;return React.createElement(React.Fragment,null,React.createElement("form",{onSubmit:a=>{a.preventDefault(),j(1)},className:"email-form"},React.createElement("label",null,"Your First Name",React.createElement("input",{required:!0,className:"input-item",name:"firstName",value:c,placeholder:"Your First Name",onChange:k})),React.createElement("label",null,"Your Last Name",React.createElement("em",{className:"optional"},"(optional)"),React.createElement("input",{className:"input-item",name:"lastName",value:d,placeholder:"Your Last Name",onChange:k})),React.createElement("label",null,"Your City",React.createElement("input",{required:!0,className:"input-item",name:"city",value:e,placeholder:"Your City",onChange:k})),React.createElement("label",null,"Your State",React.createElement("select",{required:!0,className:"input-item",name:"state",value:f,onChange:k},ALL_US_STATES.map(a=>React.createElement("option",{key:a},a)))),React.createElement("button",{type:"submit",className:"button"},"Prep My Email")),1<=i&&React.createElement(React.Fragment,null,React.createElement("div",{className:"email-preview"},React.createElement("h2",null,"Send this email to:"),React.createElement("div",{className:"preview-for"},emailDataEntries.map(([a,{title:b}])=>React.createElement("label",{className:"radio-inline"},React.createElement("input",{key:a,onChange:()=>l(a),type:"radio",name:"optradio",checked:g===a,value:a}),b))),React.createElement("div",null,2<=i&&React.createElement(React.Fragment,null,React.createElement("h3",null,"Preview"),React.createElement("div",{className:"email-preview__body"},React.createElement("strong",null,"Subject:")," ",m,React.createElement("br",null),React.createElement("strong",null,"To:")," ",o,React.createElement("br",null),React.createElement("br",null),n))))),2<=i&&React.createElement("div",{className:"send-button-container"},React.createElement("div",{className:"button-holder"},React.createElement("a",{onClick:()=>j(3),rel:"noreferrer",target:"_blank",href:buildGmailLink({body:n,subject:m,email:o})},React.createElement("button",{className:"gmail-send button"},"Open In Gmail")),React.createElement("a",{onClick:()=>j(3),rel:"noreferrer",target:"_blank",href:buildMailTo({body:n,subject:m,email:o})},React.createElement("button",{className:"button"},"Open In Default App"))),React.createElement("em",null,"You\u2019ll still have to press \u201Csend\u201D on your email client, but the rest should be done for you.")),3<=i&&React.createElement(MoreWaysToHelp,null))},MoreWaysToHelp=()=>React.createElement("section",{className:"more-ways-to-help"},React.createElement("h2",null,"\uD83D\uDCAA More Ways To Help"),React.createElement("div",null,React.createElement("h3",null,"If you\u2019re on your phone or an Apple computer with a US number:"),React.createElement("ul",null,React.createElement("li",null,React.createElement("a",{href:"sms:+5516&body=FLOYD"},"Text FLOYD to 5516")),React.createElement("li",null,React.createElement("a",{href:"sms:+668366&body=JUSTICE"},"Text JUSTICE to 668366")))),React.createElement("div",null,React.createElement("h3",null,"Other ideas:"),React.createElement("ul",null,React.createElement("li",null,React.createElement("a",{href:"https://www.gofundme.com/f/georgefloyd"},"\uD83D\uDE4F Donate to the Official George Floyd Memorial Fund")),React.createElement("li",null,React.createElement("a",{href:"https://minnesotafreedomfund.org/"},"\uD83D\uDCB8 Pay protestor\u2019s bail with the Minnesota Freedom Fund")),React.createElement("li",null,React.createElement("a",{href:"https://blacklivesmatter.com/"},"\uD83D\uDCCB Donate or volunteer with Black Lives Matter")),React.createElement("li",null," ",React.createElement("a",{href:"https://blacklivesmatters.carrd.co/"},"\uD83D\uDCD6 A great list of petitions, donations, and other resources"))))),Footer=()=>React.createElement("section",{className:"footer"},"We made this website to amplify the voices of the BLM movement, and we plan to add more functionalities in the near future. If you have any feature suggestions or resources to share, please DM ",React.createElement("a",{rel:"noreferrer",target:"_blank",href:"https://twitter.com/oddrilynn"},"@oddrilynn")," or",React.createElement("a",{rel:"noreferrer",target:"_blank",href:"https://twitter.com/4shub"},"@4shub")," on Twitter."),App=()=>React.createElement("div",{className:"center"},React.createElement("header",null,React.createElement("h1",null,"\u270A #BlackLivesMatter")),React.createElement("main",null,React.createElement("section",null,React.createElement("p",null,React.createElement("strong",null,"We must hold the Minneapolis criminal justice system accountable and demand justice for George Floyd, a Black man murdered in cold blood by four cops in the Minneapolis Police Department.")," ",React.createElement("br",null),React.createElement("br",null),"With this website, you can quickly create personalized emails to send to the Minneapolis District Attorney and Minneapolis Police Department\u2014an easy way to stand in solidarity with Floyd and the BLM movement."),React.createElement("p",null,"None of the information entered here will ever be stored! All processing is done ",React.createElement("a",{href:"https://www.cloudflare.com/learning/serverless/glossary/client-side-vs-server-side/"},"client-side"),".")),React.createElement(EmailData,null),React.createElement(Footer,null)));ReactDOM.render(React.createElement(App,null),document.getElementById("app"));
+        </script>
+    </body>
+
+</html>
