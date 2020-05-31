@@ -129,9 +129,9 @@ ${firstName}${lastName}`
 }
 
 
-const buildGmailLink = ({ email, body, subject }) => `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&subject=${subject}&body=${encodeURIComponent(body)}`
+const buildGmailLink = ({ email, body, subject }) => `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-const buildMailTo = ({ email, body, subject }) => `mailto:${email}.com?subject=${subject}&body=${encodeURIComponent(body)}`
+const buildMailTo = ({ email, body, subject }) => `mailto:${email}.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
 const emailDataEntries = Object.entries(EMAIL_DATA);
 
@@ -163,9 +163,16 @@ const EmailData = () => {
     const body = applyPreview(previewType, emailInfo);
     const email = EMAIL_DATA[previewType] && EMAIL_DATA[previewType].email;
 
+    const submitForm = (e) => {
+        e.preventDefault();
+        if (step === 0) {
+            setNextStep(1);
+        }
+    }
+
     return (
         <React.Fragment>
-            <form onSubmit={(e) => { e.preventDefault(); setNextStep(1)}} className="email-form">
+            <form onSubmit={submitForm} className="email-form">
                 <label>
                     Your First Name
                     <input required className="input-item" name="firstName" value={firstName} placeholder="Your First Name" onChange={setState} />
