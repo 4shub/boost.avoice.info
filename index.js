@@ -394,7 +394,7 @@ const applyPreview = (previewType, { firstName, lastName, city, state, country }
     const region = country === USA ? state : country;
 
     return EMAIL_DATA[previewType] && EMAIL_DATA[previewType].body({
-        firstName: firstName || 'FIRST NAME', lastName: lastName ? ` ${lastName}` : '', city: city || 'CITY', state: region || 'state'
+        firstName: firstName || 'FIRST NAME', lastName: lastName && lastName.length > 0 ? ` ${lastName}` : '', city: city || 'CITY', state: region || 'state'
     });
 }
 
