@@ -131,7 +131,7 @@ ${firstName}${lastName}`
 
 const buildGmailLink = ({ email, body, subject }) => `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-const buildMailTo = ({ email, body, subject }) => `mailto:${email}.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+const buildMailTo = ({ email, body, subject }) => `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
 const emailDataEntries = Object.entries(EMAIL_DATA);
 
