@@ -316,9 +316,9 @@ const EMAIL_DATA = {
         email: "citizeninfo@hennepin.us",
             body: ({ firstName, lastName, city, state }) => `To Whom It May Concern:
         
-My name is ${firstName}${lastName}. I live ${city}, ${state}, but I am appalled enough about recent events in Minneapolis to take the time to write in.
+My name is ${firstName}${lastName}. I live in ${city}, ${state}, but I am appalled enough about recent events in Minneapolis to take the time to write in.
 
-I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four Minneapolis Police Department offices on May 25, 2020. This incident was caught on video by multiple sources, including but not limited to the one linked, all of which clearly prove the guilt of the officers in question.
+I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four Minneapolis Police Department officers on May 25, 2020. This incident was caught on video by multiple sources, including but not limited to the one linked, all of which clearly prove the guilt of the officers in question.
 
 Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officers, including Tou Thao (badge #7162) are accomplices to this vile hate crime.
 
@@ -334,9 +334,9 @@ ${firstName}${lastName}`
         email: "police@minneapolismn.gov",
         body: ({ firstName, lastName, city, state }) => `To Whom It May Concern:
     
-My name is ${firstName}${lastName}. I live ${city}, ${state}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
+My name is ${firstName}${lastName}. I live in ${city}, ${state}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
 
-I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your offices on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
+I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your officers on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
 
 Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officers, including Tou Thao (badge #7162) are accomplices to this vile hate crime.
 
@@ -352,9 +352,9 @@ ${firstName}${lastName}`
         email: "minneapolis311@minneapolismn.gov",
         body: ({ firstName, lastName, city, state }) => `To Whom It May Concern:
     
-My name is ${firstName}${lastName}. I live ${city}, ${state}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
+My name is ${firstName}${lastName}. I live in ${city}, ${state}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
 
-I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your offices on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
+I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your officers on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
 
 Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officers, including Tou Thao (badge #7162) are accomplices to this vile hate crime.
 
@@ -370,9 +370,9 @@ ${firstName}${lastName}`
         email: "policereview@minneapolismn.gov",
         body: ({ firstName, lastName, city, state }) =>  `To Whom It May Concern:
 
-My name is ${firstName}${lastName}. I live ${city}, ${state}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
+My name is ${firstName}${lastName}. I live in ${city}, ${state}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
 
-I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your offices on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
+I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your officers on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
 
 Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officers, including Tou Thao (badge #7162) are accomplices to this vile hate crime.
 
