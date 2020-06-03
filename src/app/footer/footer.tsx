@@ -12,7 +12,7 @@ const Footer = () => (
             <a rel="noreferrer" target="_blank" href="https://twitter.com/4shub">
                 @4shub
             </a>{' '}</span>
-            on Twitter.
+            on Twitter or send an email to <a href="mailto:shub@shub.club">shub@shub.club</a>.
         </footer>
         <footer className="footer">
             This code is open source (MIT) and available on {' '}
