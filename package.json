@@ -14,7 +14,7 @@
         "build:templates": "ts-node ./src/template-builder"
     },
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "devDependencies": {
         "@babel/cli": "^7.10.1",
         "@babel/core": "^7.10.2",
