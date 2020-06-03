@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { flatten } from 'lodash';
 import { TemplateGroup, TemplateGroups } from './template.types';
 import { extractTemplateData } from './extract-template-data';
 
@@ -24,7 +25,7 @@ const getAllTemplatesWithSlugs = async () => {
     const rootDirectoryContent = await getDirectoryContent();
 
     const templateGroupsArray = await Promise.all(
-        rootDirectoryContent.flatMap(async (folderName) => {
+        rootDirectoryContent.map(async (folderName) => {
             const dirContent = await getDirectoryContent(folderName);
 
             return Promise.all(
@@ -39,7 +40,7 @@ const getAllTemplatesWithSlugs = async () => {
         })
     );
 
-    return templateGroupsArray.flat().reduce((obj, item) => {
+    return flatten(templateGroupsArray).reduce((obj, item) => {
         if (!obj[item.slug]) {
             obj[item.slug] = item;
         } else {
