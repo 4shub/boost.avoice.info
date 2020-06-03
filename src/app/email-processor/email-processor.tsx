@@ -30,7 +30,7 @@ const applyPreview = (emailTemplates: TemplateDataGroup) => (
             firstName: firstName || 'FIRST NAME',
             lastName: lastName && lastName.length > 0 ? ` ${lastName}` : '',
             city: city || 'CITY',
-            state: region || 'state',
+            region: region || 'state',
         })
     );
 };
