@@ -10,6 +10,7 @@ jobs:
     working_directory: ~/boost
     steps:
       - checkout
+      - run: npm run build:templates
       - run: . scripts/deploy.sh
 workflows:
   version: 2
