@@ -28,6 +28,10 @@ const getAllTemplatesWithSlugs = async () => {
         rootDirectoryContent.map(async (folderName) => {
             const dirContent = await getDirectoryContent(folderName);
 
+            if (!dirContent || !dirContent.length) {
+                return null;
+            }
+
             return Promise.all(
                 dirContent
                     // we are only going to process text files for now.
@@ -38,7 +42,7 @@ const getAllTemplatesWithSlugs = async () => {
                     })
             );
         })
-    );
+    ).then(e => e.filter(e => !!e));
 
     return flatten(templateGroupsArray).reduce((obj, item) => {
         if (!obj[item.slug]) {
