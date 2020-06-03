@@ -12,7 +12,7 @@
   },
   "production": {
     "scripts": {
-      "build": "npm i && mkdir -p dist && npm run build",
+      "build": "npm i && npm run build",
       "start": "forever restart boost"
     },
     "scriptOptions": {
