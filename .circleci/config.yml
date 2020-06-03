@@ -10,9 +10,9 @@ jobs:
     working_directory: ~/boost
     steps:
       - checkout
-      - mkdir -p ./dist
-      - npm i
-      - npm run build:templates
+      - run: mkdir -p ./dist
+      - run: npm i
+      - run: npm run build:templates
       - run: . scripts/deploy.sh
 workflows:
   version: 2
