@@ -1,0 +1,1 @@
+export const getCurrentPath = (): string => typeof window !== 'undefined' && window.location.pathname;

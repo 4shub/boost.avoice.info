@@ -160,3 +160,34 @@ a {
   color: #fff;
   font-weight: 600;
 }
+
+.navigation {
+  margin-top: 15px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+
+      margin-right: 10px;
+
+
+    }
+
+  }
+
+  &__more {
+    font-weight: 600;
+  }
+
+  &__city {
+    text-transform: capitalize;
+
+    &--selected {
+      font-weight: 600;
+    }
+  }
+}

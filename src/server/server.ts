@@ -18,12 +18,15 @@ app.get('/:service', (req: Request, res: Response) => {
         return res.sendStatus(404);
     }
 
-    const payload: AppProps = { emailTemplates: templates[req.params.service].data };
+    const payload: AppProps = {
+        currentPath: req.params.service,
+        cities: Object.keys(templates),
+        emailTemplates: templates[req.params.service].data,
+    };
 
     const content = ReactDOM.renderToString(React.createElement(App, payload));
 
     res.send(renderIndex(content, payload));
 });
-
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
