@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run: mkdir -p ./dist
       - run: npm i
-      - run: npm run build:templates
+      - run: npm run build
       - run: . scripts/deploy.sh
 workflows:
   version: 2

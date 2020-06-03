@@ -12,7 +12,7 @@
   },
   "production": {
     "scripts": {
-      "build": "npm i && npm run build",
+      "build": "npm i",
       "start": "forever restart boost"
     },
     "scriptOptions": {
