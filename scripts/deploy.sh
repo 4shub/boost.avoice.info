@@ -6,3 +6,4 @@ rm -rf $TMP_PATH
 (cd $PWD && tar -X $PWD/.platformignore -czvf $TMP_PATH .)
 
 curl -F "data=@$TMP_PATH" --header "Authorization: Bearer $DEPLOY_TOKEN" "https://platform.shub.dev/app/boost?type=production"
+
