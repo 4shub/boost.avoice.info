@@ -15,9 +15,9 @@ const Footer = () => (
             on Twitter.
         </footer>
         <footer className="footer">
-            This code is open source (MIT), feel free to look through the code{' '}
+            This code is open source (MIT) and available on {' '}
             <a rel="noreferrer" target="_blank" href="https://github.com/4shub/boost.avoice.info">
-                here
+                GitHub
             </a>
             .
         </footer>
