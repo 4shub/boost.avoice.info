@@ -12,8 +12,8 @@
   },
   "production": {
     "scripts": {
-      "build": "npm i && npm run build:templates && npm run build",
-      "start": "echo 'hi'"
+      "build": "npm i && mkdir -p dist && npm run build",
+      "start": "forever restart boost"
     },
     "scriptOptions": {
       "doNotDieOnPreStartFail": true
