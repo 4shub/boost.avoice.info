@@ -7,7 +7,7 @@ import templates from '../../dist/template-data.json';
 import { AppProps } from '../app/app.types';
 
 const app = express();
-const port = 3000;
+const port = 3216;
 
 app.use(express.static('dist'));
 
