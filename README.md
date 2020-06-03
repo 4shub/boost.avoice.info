@@ -32,7 +32,7 @@ Follow these steps to setup the code:
 
 1. Run this code
     ```
-    npm dev
+    npm run dev
     ```
 
 ### Emails
