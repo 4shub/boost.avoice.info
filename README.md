@@ -1,4 +1,4 @@
-# We must hold the Minneapolis criminal justice system accountable and demand justice for George Floyd, a Black man murdered in cold blood by four cops in the Minneapolis Police Department.
+# We must hold the criminal justice system accountable for brutality, murder, and unjust sentences. This project began as a way to demand justice for George Floyd, a Black man murdered in cold blood by four cops in the Minneapolis Police Department. It has now expanded to support others affected by injustice.
 
 **Learn more here [https://blacklivesmatters.carrd.co/]()**
 
@@ -6,7 +6,7 @@
 
 # boost.avoice.com
 
-boost.avoice.com is website where you can can quickly create personalized emails to send to people with positions of power as easy way to stand in solidarity with Floyd and the BLM movement.
+boost.avoice.com is website where you can can quickly create personalized emails to send to people with positions of power—an easy way to stand in solidarity with the BLM movement.
 
 ## Contributing
 
@@ -43,14 +43,12 @@ Follow these steps to setup the code:
 
 ### Emails
 
-Emails can be edited without any programming experience necessary! Follow the instructions below to learn more.
-
-You should have some familiarity with either Github or the `git` commandline tool as you would need to use it to navigate the software
+Emails can be edited with limited programming experience and some familiarity with either GitHub or Git.
 
 #### Create a new email
 
-1.  Visit or create a new folder in templates. These folders are mapped to the urls of this website. The `minneapolis` folder routes to [http://boost.avoice.info/minneapolis](http://boost.avoice.info/minneapolis);
-2.  Add a new `txt` file with your content in the structure below
+1.  If the incident occurred in a city that is not yet published, create a new folder in the `templates` folder. Name this folder based on the location of the incident. For example, if the incident happened in the city `gotham` and you named the folder gotham, it would create a new link at http://boost.avoice.info/gotham. Otherwise, skip this step.
+2.  Add a new `txt` file to the folder named after the city where the incident occurred. Your content will have to follow the structure below:
 
     ```
     TITLE: title/person we want to contact
@@ -60,9 +58,9 @@ You should have some familiarity with either Github or the `git` commandline too
     The text of the email goes here
     ```
 
-3.  You can add the following variables to your email body and subject line as well:
+3.  You can add the following variables to your email body and subject line, as well:
     -   `${firstName}` - The form-filler's first name
     -   `${city}` - The city the form-filler is from
     -   `${region}` - The state (if within the USA) or country the form-filler is from
     -   `${lastName}` - The form-filler's last name (Warning, this is an optional field and will not always be entered in)
-4.  When done, you can create a pull request for this repository
+4.  Once you're done, you can create a pull request for this repository and we'll review it!
