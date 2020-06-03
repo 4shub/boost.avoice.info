@@ -29,6 +29,12 @@ Follow these steps to setup the code:
     ```
     npm i
     ```
+   
+1. Create dist directory
+
+   ```
+   mkdir -p dist
+   ```
 
 1. Run this code
     ```
