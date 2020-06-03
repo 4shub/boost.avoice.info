@@ -6,7 +6,7 @@ import { EmailProcessorProps } from './email-processor.types';
 import { TemplateDataGroup, TemplateGroup } from '../../template-builder/template.types';
 
 const buildGmailLink = ({ email, body, subject }) =>
-    `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&subject=${encodeURIComponent(
+    `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&su=${encodeURIComponent(
         subject
     )}&body=${encodeURIComponent(body)}`;
 
