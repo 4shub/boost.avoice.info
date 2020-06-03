@@ -1,0 +1,16 @@
+TITLE: Minneapolis Police Department
+EMAIL: police@minneapolismn.gov
+SUBJECT_LINE: I, ${firstName}, demand justice for George Floyd
+BODY:
+To Whom It May Concern:
+
+My name is ${firstName}${lastName}. I live in ${city}, ${region}, but I am appalled enough about recent events involving the Minneapolis Police Department to write in.
+
+I am demanding justice for George Floyd, a Black man who was murdered in cold blood by four of your officers on May 25, 2020. This incident was caught on video by multiple sources, all of which clearly prove the guilt of the officers in question.
+
+Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officers, including Tou Thao (badge #7162) are accomplices to this vile hate crime.
+
+Firing the officers involved is not enough, and giving these officers paid leave is beyond inappropriate. Justice for George Floyd will not be served until these officers are taken to court and charged appropriately for their crimes.
+
+Sincerely,
+${firstName}${lastName}

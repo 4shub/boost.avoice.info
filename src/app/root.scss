@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+
+}
+body, html {
+  opacity: 1;
+  background-color: #fff;
+
+  background: #fff;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: Open Sans, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "pnum";
+  font-feature-settings: "pnum";
+  font-variant-numeric: proportional-nums;
+
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.center {
+  max-width: 640px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.email-preview__body {
+  white-space: break-spaces;
+  padding: 20px;
+  border: 1px solid #b7b7b7;
+  margin: 5px 0 15px 0;
+  border-radius: 6px;
+}
+
+.email-form > label {
+  display: block;
+  font-weight: 600;
+}
+
+.input-item {
+  display: block;
+  font: inherit;
+  font-weight: normal;
+  padding: 5px 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #b7b7b7;
+  border-radius: 6px;
+  max-width: 300px;
+  width: 100%;
+  height: 45px;
+  background-color: white;
+}
+
+
+
+.more-ways-to-help {
+  margin-top: 100px;
+}
+
+.preview-for > * {
+  display: block;
+  padding: 10px;
+  border: 1px solid;
+  margin: 10px 0;
+  border-radius: 6px;
+  width: 300px;
+  border-color: #b7b7b7;
+}
+
+.optional {
+  margin-left: 5px;
+}
+
+input[type="radio"] {
+  margin-right: 15px;
+}
+
+
+h1 {
+  font-size: 42px;
+}
+
+
+
+h2, h3, h4, h5 {
+  margin-bottom: 5px;
+}
+
+.button {
+  min-width: 150px;
+  text-decoration: none;
+  padding: 10px 30px;
+  font: inherit;
+  cursor: pointer;
+  display: block;
+  height: 45px;
+  margin-bottom: 10px;
+  border: none;
+  background: #4d42f4;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+a {
+  color: #4d42f4;
+}
+
+.button-holder {
+  display: flex;
+}
+.send-button-container a {
+  text-decoration: none;
+}
+
+.footer {
+  color: #484848;
+  font-size: 13px;
+  margin: 100px 0;
+}
+
+@media only screen and (max-width: 420px) {
+  h1 {
+    font-size: 16px;
+  }
+  .input-item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+  }
+
+  .button-holder {
+    display: block;
+  }
+}
+
+.alert {
+  background-color: #A80000;
+  border-radius: 6px;
+  margin: 20px 0 0;
+  padding: 15px;
+  color: #fff;
+  font-weight: 600;
+}

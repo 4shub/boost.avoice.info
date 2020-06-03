@@ -1,0 +1,15 @@
+{
+    "verbose": true,
+    "ignore": [
+        "*.test.js",
+        "dist/web/**/*",
+        "dist/app/**/*",
+        "src/app/**/*",
+        "src/**/*.spec.ts"
+    ],
+    "ext": "ts,tsx,js,yaml",
+    "exec": "ts-node --require ./config/styleMock.js ./src/server --config tsconfig.json",
+    "watch": [
+        "./src/server"
+    ]
+}

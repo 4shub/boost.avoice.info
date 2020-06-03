@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "staging": {
+    "scripts": {
+      "build": "npm i",
+      "start": "forever restart boost"
+    },
+    "scriptOptions": {
+      "doNotDieOnPreStartFail": true
+    },
+    "domains": ["boost.avoice.info"]
+  },
+  "production": {
+    "scripts": {
+      "build": "npm i && npm run build",
+      "start": "echo 'hi'"
+    },
+    "scriptOptions": {
+      "doNotDieOnPreStartFail": true
+    },
+    "domains": ["boost.avoice.info"]
+  }
+}

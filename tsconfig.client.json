@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "rootDir": "./src",
+        "noImplicitAny": false,
+        "skipLibCheck": true,
+        "module": "commonjs",
+        "target": "es6",
+        "lib": [
+            "es2019",
+            "DOM"
+        ],
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "jsx": "react",
+        "strict": false
+    },
+    "include": [
+        "src/app/**/*",
+        "src/**/*.types.ts"
+    ]
+}
