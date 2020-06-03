@@ -10,7 +10,7 @@ jobs:
     working_directory: ~/boost
     steps:
       - checkout
-      - run: . ext-scripts/deploy.sh
+      - run: . scripts/deploy.sh
 workflows:
   version: 2
   build-and-deploy:
