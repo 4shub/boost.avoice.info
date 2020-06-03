@@ -17,13 +17,11 @@ const App = (props: AppProps) => (
             <section>
                 <p>
                     <strong>
-                        We must hold the Minneapolis criminal justice system accountable and demand justice for George
-                        Floyd, a Black man murdered in cold blood by four cops in the Minneapolis Police Department.
+                        We must hold the criminal justice system accountable for murders, brutality, and unjust charges against the Black community.
                     </strong>{' '}
                     <br />
                     <br />
-                    With this website, you can quickly create personalized emails to send to the Minneapolis District
-                    Attorney and Minneapolis Police Department—an easy way to stand in solidarity with Floyd and the BLM
+                    With this website, you can quickly create personalized emails to send to agencies that can directly impact the outcome of justice proceedings—an easy way to stand in solidarity with George Floyd, Breonna Taylor, and the BLM
                     movement.
                 </p>
                 <p>
