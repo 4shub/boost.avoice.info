@@ -7,7 +7,7 @@
         "dev": "npm run build:templates && npm-run-all --parallel dev:client dev:server",
         "dev:server": "nodemon --config 'nodemon.config.json'",
         "dev:client": "node_modules/.bin/webpack --watch",
-        "start": "node -r ./config/styleMock.js ./dist/src/server",
+        "start": "node ./dist/src/server",
         "build": "NODE_ENV=production npm run build:templates && npm run build:client && npm run build:server",
         "build:client": "node_modules/.bin/webpack",
         "build:server": "tsc --project tsconfig.json",

@@ -8,7 +8,7 @@
         "src/**/*.spec.ts"
     ],
     "ext": "ts,tsx,js,yaml",
-    "exec": "ts-node --require ./config/styleMock.js ./src/server --config tsconfig.json",
+    "exec": "ts-node ./src/server --config tsconfig.json",
     "watch": [
         "./src/server"
     ]

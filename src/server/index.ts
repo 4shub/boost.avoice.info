@@ -1,1 +1,2 @@
-import './server';
+require('../config/styleMock.js');
+require('./server');
