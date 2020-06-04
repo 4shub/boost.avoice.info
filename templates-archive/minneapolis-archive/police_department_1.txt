@@ -12,5 +12,6 @@ Officer Derek Chauvin (badge #1087) is guilty of murder. The three other officer
 
 Firing the officers involved is not enough, and giving these officers paid leave is beyond inappropriate. Justice for George Floyd will not be served until these officers are taken to court and charged appropriately for their crimes.
 
+
 Sincerely,
 ${firstName}${lastName}
