@@ -6,7 +6,15 @@ import { EmailProcessorProps } from './email-processor.types';
 import { TemplateDataGroup, TemplateGroup } from '../../template-builder/template.types';
 import SendEmailToSelector from './send-email-to-selector/send-email-to-selector';
 
+const isMobile = () => 
+    (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+
 const buildGmailLink = ({ email, body, subject }) =>
+    isMobile() ?
+    `googlegmail:///co?to=${email}&subject=${encodeURIComponent(
+        subject
+    )}&body=${encodeURIComponent(body)}`
+    :
     `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&su=${encodeURIComponent(
         subject
     )}&body=${encodeURIComponent(body)}`;
