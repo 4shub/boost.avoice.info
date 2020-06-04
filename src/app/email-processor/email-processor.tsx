@@ -4,6 +4,7 @@ import { ALL_US_STATES, COUNTRY_LIST, UNITED_STATES_OF_AMERICA } from '../consta
 import MoreWaysToHelp from './more-ways-to-help/more-ways-to-help';
 import { EmailProcessorProps } from './email-processor.types';
 import { TemplateDataGroup, TemplateGroup } from '../../template-builder/template.types';
+import SendEmailToSelector from './send-email-to-selector/send-email-to-selector';
 
 const buildGmailLink = ({ email, body, subject }) =>
     `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&su=${encodeURIComponent(
@@ -59,7 +60,8 @@ const EmailProcessor = ({ emailTemplates }: EmailProcessorProps) => {
         onUpdatePreview(key);
     };
 
-    const subjectLine = emailTemplates[previewType] && applyVariablesToString(emailTemplates[previewType].subjectLine, { firstName });
+    const subjectLine =
+        emailTemplates[previewType] && applyVariablesToString(emailTemplates[previewType].subjectLine, { firstName });
     const body = emailTemplates[previewType] && applyPreview(emailTemplates)(previewType, emailInfo);
     const email = emailTemplates[previewType] && emailTemplates[previewType].email;
 
@@ -123,7 +125,6 @@ const EmailProcessor = ({ emailTemplates }: EmailProcessorProps) => {
                         onChange={setState}
                     />
                 </label>
-
                 <button type="submit" className="button">
                     Prep My Email
                 </button>
@@ -132,22 +133,12 @@ const EmailProcessor = ({ emailTemplates }: EmailProcessorProps) => {
             {step >= 1 && (
                 <React.Fragment>
                     <div className="email-preview">
-                        <h2>Send this email to:</h2>
-                        <div className="preview-for">
-                            {emailDataEntries.map(([key, { title }], index) => (
-                                <label className="radio-inline">
-                                    <input
-                                        key={key}
-                                        onChange={() => onChangeRadio(key)}
-                                        type="radio"
-                                        name="optradio"
-                                        checked={previewType === key}
-                                        value={key}
-                                    />
-                                    {title}
-                                </label>
-                            ))}
-                        </div>
+                        <h2 id="send-email-to">Send this email to:</h2>
+                        <SendEmailToSelector
+                            onChange={onChangeRadio}
+                            emailList={emailDataEntries}
+                            selectedValue={previewType}
+                        />
                         <div>
                             {step >= 2 && (
                                 <React.Fragment>
