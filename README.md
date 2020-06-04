@@ -1,12 +1,12 @@
 # We must hold the criminal justice system accountable for brutality, murder, and unjust sentences. This project began as a way to demand justice for George Floyd, a Black man murdered in cold blood by four cops in the Minneapolis Police Department. It has now expanded to support others affected by injustice.
 
-**Learn more here [https://blacklivesmatters.carrd.co/]()**
+**Learn more here [https://blacklivesmatters.carrd.co/](https://blacklivesmatters.carrd.co/)**
 
 
 
-# boost.avoice.com
+# boost.avoice.info
 
-boost.avoice.com is website where you can can quickly create personalized emails to send to people with positions of power—an easy way to stand in solidarity with the BLM movement.
+[boost.avoice.info](https://boost.avoice.info/) is website where you can can quickly create personalized emails to send to people with positions of power—an easy way to stand in solidarity with the BLM movement.
 
 ## Contributing
 
