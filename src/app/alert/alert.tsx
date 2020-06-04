@@ -11,7 +11,7 @@ const Alert = ({ currentPath }: { currentPath: string }) => {
         }
 
         return (
-            <div className="alert">UPDATE: Some emails may not send as Minneapolis servers experience disruption.</div>
+            <div className="alert">UPDATE: All four officers involved with George Floyd's murder have been charged, and the case has moved to the Minnesota Attorney General.</div>
         );
     } catch (e) {
         return null;
