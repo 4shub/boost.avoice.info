@@ -52,6 +52,7 @@ body, html {
 
 .input-item {
   display: block;
+  box-shadow: none;
   font: inherit;
   font-weight: normal;
   padding: 5px 10px;
@@ -63,6 +64,15 @@ body, html {
   height: 45px;
   background-color: white;
 }
+
+select.input-item  {
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+}
+
+select::-ms-expand { display: none; }
 
 
 
