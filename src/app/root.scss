@@ -1,7 +1,10 @@
+$red: #A80000;
+$blue: #2C57C9;
+
 * {
   box-sizing: border-box;
-
 }
+
 body, html {
   opacity: 1;
   background-color: #fff;
@@ -37,12 +40,87 @@ body, html {
   margin: 0 auto;
 }
 
-.email-preview__body {
+.radio-inline{
+}
+
+.button {
+  min-width: 150px;
+  text-decoration: none;
+  padding: 10px 30px;
+  font: inherit;
+  cursor: pointer;
+  display: block;
+  height: 45px;
+  border: none;
+  background: $blue;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+
+  &__container {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.preview-content {
   white-space: break-spaces;
-  padding: 20px;
   border: 1px solid #b7b7b7;
   margin: 5px 0 15px 0;
   border-radius: 6px;
+  position: relative;
+
+  @media only screen and (max-width: 420px) {
+    padding: 10px;
+  }
+
+  &__text {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 20px;
+
+    @media only screen and (max-width: 420px) {
+      padding: 0;
+    }
+
+  }
+
+  &__button {
+    &-placeholder {
+      width: 151px;
+      float: right;
+      height: 15px;
+
+      @media only screen and (max-width: 420px) {
+        display: none;
+      }
+    }
+    margin: 0;
+    min-width: auto;
+    font-size: 14px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #333;
+    height: 35px;
+    padding: 0 15px;
+    top: 12px;
+    right: 20px;
+    position: absolute;
+
+    @media only screen and (max-width: 420px) {
+      position: static;
+      width: 100%;
+      margin: 15px 0 0;
+    }
+  }
+
+  &__hidden-copy {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 .email-form > label {
@@ -86,7 +164,7 @@ select::-ms-expand { display: none; }
   border: 1px solid;
   margin: 10px 0;
   border-radius: 6px;
-  width: 300px;
+  max-width: 300px;
   border-color: #b7b7b7;
 }
 
@@ -109,25 +187,10 @@ h2, h3, h4, h5 {
   margin-bottom: 5px;
 }
 
-.button {
-  min-width: 150px;
-  text-decoration: none;
-  padding: 10px 30px;
-  font: inherit;
-  cursor: pointer;
-  display: block;
-  height: 45px;
-  margin-bottom: 10px;
-  border: none;
-  background: #4d42f4;
-  color: #fff;
-  border-radius: 6px;
-  font-weight: 600;
-  margin-right: 10px;
-}
+
 
 a {
-  color: #4d42f4;
+  color: $blue;
 }
 
 .button-holder {
@@ -140,7 +203,12 @@ a {
 .footer {
   color: #484848;
   font-size: 13px;
+
   margin: 50px 0;
+}
+
+.gmail-send {
+  background-color: $red;
 }
 
 @media only screen and (max-width: 420px) {
@@ -155,15 +223,24 @@ a {
   .button {
     display: block;
     width: 100%;
+    margin-bottom: 15px;
+
+    &__container {
+      margin-left: 0;
+    }
   }
 
   .button-holder {
     display: block;
   }
+
+  .preview-content__button {
+    margin-bottom: 0;
+  }
 }
 
 .alert {
-  background-color: #A80000;
+  background-color: $red;
   border-radius: 6px;
   margin: 20px 0 0;
   padding: 15px;

@@ -64,3 +64,4 @@ Emails can be edited with limited programming experience and some familiarity wi
     -   `${region}` - The state (if within the USA) or country the form-filler is from
     -   `${lastName}` - The form-filler's last name (Warning, this is an optional field and will not always be entered in)
 4.  Once you're done, you can create a pull request for this repository and we'll review it!
+    - Keep emails under 4000 characters long or the gmail link will not work. If you submit an email that long we will hide the "send with Gmail" option.

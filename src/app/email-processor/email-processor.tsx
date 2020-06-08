@@ -5,6 +5,7 @@ import MoreWaysToHelp from './more-ways-to-help/more-ways-to-help';
 import { EmailProcessorProps } from './email-processor.types';
 import { TemplateDataGroup, TemplateGroup } from '../../template-builder/template.types';
 import SendEmailToSelector from './send-email-to-selector/send-email-to-selector';
+import PreviewContent from './preview-content/preview-content';
 
 const buildGmailLink = ({ email, body, subject }) =>
     `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&su=${encodeURIComponent(
@@ -143,14 +144,13 @@ const EmailProcessor = ({ emailTemplates }: EmailProcessorProps) => {
                             {step >= 2 && (
                                 <React.Fragment>
                                     <h3>Preview</h3>
-                                    <div className="email-preview__body">
+                                    <PreviewContent>
                                         <strong>Subject:</strong> {subjectLine}
-                                        <br />
+                                    </PreviewContent>
+                                    <PreviewContent>
                                         <strong>To:</strong> {email}
-                                        <br />
-                                        <br />
-                                        {body}
-                                    </div>
+                                    </PreviewContent>
+                                    <PreviewContent>{body}</PreviewContent>
                                 </React.Fragment>
                             )}
                         </div>
@@ -160,18 +160,24 @@ const EmailProcessor = ({ emailTemplates }: EmailProcessorProps) => {
             {step >= 2 && (
                 <div className="send-button-container">
                     <div className="button-holder">
+                        {body.length <= 4000 && (
+                            <a
+                                onClick={() => setNextStep(3)}
+                                rel="noreferrer"
+                                className="button__container"
+                                target="_blank"
+                                href={buildGmailLink({ body, subject: subjectLine, email })}
+                            >
+                                <button autoFocus className="gmail-send button">
+                                    Open In Gmail
+                                </button>
+                            </a>
+                        )}
                         <a
                             onClick={() => setNextStep(3)}
                             rel="noreferrer"
                             target="_blank"
-                            href={buildGmailLink({ body, subject: subjectLine, email })}
-                        >
-                            <button className="gmail-send button">Open In Gmail</button>
-                        </a>
-                        <a
-                            onClick={() => setNextStep(3)}
-                            rel="noreferrer"
-                            target="_blank"
+                            className="button__container"
                             href={buildMailTo({ body, subject: subjectLine, email })}
                         >
                             <button className="button">Open In Default App</button>
