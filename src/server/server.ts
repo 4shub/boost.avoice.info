@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/server';
 import App from '../app/app';
 import renderIndex from './util/render-index';
+import templates from '../../dist/template-data.json';
 import { AppProps } from '../app/app.types';
 
 const app = express();
@@ -10,10 +11,18 @@ const port = 3216;
 
 app.use(express.static('dist'));
 
-app.get('/', (req: Request, res: Response) => res.redirect('/minneapolis'));
+app.get('/', (req: Request, res: Response) => {
+    const host = req.hostname.includes('local') ? 'local' : 'boost';
+
+    if (host === 'boost') {
+        res.redirect('/minneapolis');
+        return;
+    }
+
+    res.send(404);
+});
 
 app.get('/:service', (req: Request, res: Response) => {
-    const templates = require('../../dist/template-data.json');
 
     const host = req.hostname.includes('local') ? 'local' : 'boost';
 
