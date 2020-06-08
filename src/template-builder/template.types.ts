@@ -3,13 +3,16 @@ export type TemplateData = {
     email: string;
     body: string;
     subjectLine: string;
-}
+};
 
 export type TemplateDataGroup = Record<string, TemplateData>;
 
 export type TemplateGroup = {
     slug: string;
     data: TemplateDataGroup;
-}
+};
 
-export type TemplateGroups = Record<string, TemplateGroup>;
+export type TemplateGroups = {
+    local: Record<string, TemplateGroup>;
+    boost: Record<string, TemplateGroup>;
+};

@@ -10,23 +10,24 @@ const TEMPLATE_OUTPUT_PATH = path.join(__dirname, '..', '..', 'dist', 'template-
 const getDirectoryContent = (location: string = ''): Promise<string[]> =>
     new Promise((resolve) => fs.readdir(path.join(TEMPLATE_FOLDER_PATH, location), (e, r) => resolve(r)));
 
-const getFileData = (folderPath, fileName): Promise<TemplateGroup> => {
+const getFileData = (folderPath: string, slug: string, fileName: string): Promise<TemplateGroup> => {
     const pathToFile = path.join(TEMPLATE_FOLDER_PATH, folderPath, fileName);
 
     return new Promise((resolve) => {
         fs.readFile(pathToFile, 'utf8', (e, rawFileData) => resolve(rawFileData));
     }).then((rawFileData: string) => ({
         data: { [fileName.replace('.txt', '')]: extractTemplateData(rawFileData) },
-        slug: `${folderPath}`,
+        slug: slug,
     }));
 };
 
-const getAllTemplatesWithSlugs = async () => {
-    const rootDirectoryContent = await getDirectoryContent();
+const getAllTemplatesWithSlugs = async (location: string) => {
+    const rootDirectoryContent = await getDirectoryContent(location);
 
     const templateGroupsArray = await Promise.all(
         rootDirectoryContent.map(async (folderName) => {
-            const dirContent = await getDirectoryContent(folderName);
+            const basePath = path.join(location, folderName);
+            const dirContent = await getDirectoryContent(basePath);
 
             if (!dirContent || !dirContent.length) {
                 return null;
@@ -38,7 +39,7 @@ const getAllTemplatesWithSlugs = async () => {
                     // We only have shallow routes now aka no sub-directories allowed!
                     .filter((fileName) => fileName.includes('.txt'))
                     .map(async (fileName) => {
-                        return getFileData(folderName, fileName);
+                        return getFileData(basePath, folderName, fileName);
                     })
             );
         })
@@ -63,9 +64,12 @@ const saveTemplateGroupData = (groupTemplateData: TemplateGroups) => {
 };
 
 const buildTemplates = async () => {
-    const groupTemplateData = await getAllTemplatesWithSlugs();
+    const [local, boost] = await Promise.all([
+        getAllTemplatesWithSlugs('local'),
+        getAllTemplatesWithSlugs('boost'),
+    ]);
 
-    saveTemplateGroupData(groupTemplateData);
+    saveTemplateGroupData({ local, boost });
 };
 
 buildTemplates();

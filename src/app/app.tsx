@@ -41,8 +41,7 @@ const App = (props: AppProps) => (
                     <br />
                     <br />
                     With this website, you can quickly create personalized emails to send to agencies that can directly
-                    impact the outcome of justice proceedings—an easy way to stand in solidarity with George Floyd,
-                    Breonna Taylor, and the BLM movement.
+                    impact the outcome of justice proceedings—an easy way to stand in solidarity with the BLM movement.
                 </p>
                 <p>
                     None of the information entered here will ever be stored. All processing is done{' '}
