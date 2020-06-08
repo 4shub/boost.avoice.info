@@ -47,8 +47,15 @@ Emails can be edited with limited programming experience and some familiarity wi
 
 #### Create a new email
 
-1.  If the incident occurred in a city that is not yet published, create a new folder in the `templates` folder. Name this folder based on the location of the incident. For example, if the incident happened in the city `gotham` and you named the folder gotham, it would create a new link at http://boost.avoice.info/gotham. Otherwise, skip this step.
-2.  Add a new `txt` file to the folder named after the city where the incident occurred. Your content will have to follow the structure below:
+1.  If the incident occurred in a city that is not yet published, create a new folder in the `templates` folder. Name this folder based on the location of the incident. For example, if the incident happened in the city `gotham` and you named the folder gotham, it would create a new link at http://boost.avoice.info/gotham. Otherwise, skip this step. Please place all local initiatives within the `local` folder in `templates.
+2. (Optional) Create a file called `METADATA` in your folder to control the title and summary of this initative. Use the following structure:
+    ```
+    TITLE: The title of your initiative, will default to #blacklivesmatter if not included
+    SUMMARY:
+    Summary/description of your initiative goes here. This will default to the text seen on `https://boost.avoice.info/minneapolis` if not included.
+   ```
+   
+3.  Add a new `txt` file to the folder named after the city where the incident occurred. Your content will have to follow the structure below:
 
     ```
     TITLE: title/person we want to contact
@@ -58,10 +65,10 @@ Emails can be edited with limited programming experience and some familiarity wi
     The text of the email goes here
     ```
 
-3.  You can add the following variables to your email body and subject line, as well:
+4.  You can add the following variables to your email body and subject line, as well:
     -   `${firstName}` - The form-filler's first name
     -   `${city}` - The city the form-filler is from
     -   `${region}` - The state (if within the USA) or country the form-filler is from
     -   `${lastName}` - The form-filler's last name (Warning, this is an optional field and will not always be entered in)
-4.  Once you're done, you can create a pull request for this repository and we'll review it!
+5.  Once you're done, you can create a pull request for this repository and we'll review it!
     - Keep emails under 4000 characters long or the gmail link will not work. If you submit an email that long we will hide the "send with Gmail" option.

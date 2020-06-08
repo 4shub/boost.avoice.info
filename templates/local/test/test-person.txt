@@ -1,0 +1,7 @@
+TITLE: Test
+EMAIL: test@test.co
+SUBJECT_LINE: Henlo
+BODY:
+Hi this is sample text.
+
+${firstName} ${lastName} tests

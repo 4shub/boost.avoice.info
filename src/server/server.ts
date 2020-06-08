@@ -19,7 +19,7 @@ app.get('/', (req: Request, res: Response) => {
         return;
     }
 
-    res.send(404);
+    res.sendStatus(404);
 });
 
 app.get('/:service', (req: Request, res: Response) => {
@@ -34,6 +34,7 @@ app.get('/:service', (req: Request, res: Response) => {
 
     const payload: AppProps = {
         host,
+        metadata: template.metadata || {},
         currentPath: req.params.service,
         cities: host === 'boost' ? Object.keys(templates[host]) : [],
         emailTemplates: template.data,

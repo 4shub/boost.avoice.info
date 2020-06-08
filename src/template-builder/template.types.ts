@@ -16,3 +16,8 @@ export type TemplateGroups = {
     local: Record<string, TemplateGroup>;
     boost: Record<string, TemplateGroup>;
 };
+
+export type TemplateMetadata = {
+    headingText: string;
+    bodyText: string;
+}

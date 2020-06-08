@@ -1,4 +1,4 @@
-import { TemplateData } from './template.types';
+import {TemplateData, TemplateMetadata} from './template.types';
 
 const clearExtract = (extractedText: string[]) => (!extractedText[1] ? null : extractedText[1].trim());
 
@@ -10,6 +10,10 @@ const getSubjectLine = (template: string) => clearExtract(template.match(/SUBJEC
 
 const getBody = (template: string) => template.split('BODY:')[1].trim();
 
+const getMetaHeadingText = (rawMetadata: string) => clearExtract(rawMetadata.match(/TITLE:(.+?)[\r\n]/));
+const getMetaBodyText = (rawMetadata: string) => rawMetadata.split('SUMMARY:')[1].trim();
+
+
 export const extractTemplateData = (template: string): TemplateData => {
     return {
         title: getTitle(template),
@@ -18,3 +22,8 @@ export const extractTemplateData = (template: string): TemplateData => {
         body: getBody(template),
     };
 };
+
+export const extractTemplateMetaData = (rawMetadata: string): TemplateMetadata => ({
+    bodyText: getMetaBodyText(rawMetadata),
+    headingText: getMetaHeadingText(rawMetadata),
+})

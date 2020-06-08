@@ -6,7 +6,7 @@ export const embedJSON = (title: string, obj: Record<any, any>) =>
 const renderIndex = (content: string, payload: AppProps) => `
     <html lang="en">
         <head>
-            <title>#blacklivesmatter</title>
+            <title>${payload.metadata?.headingText || '#blacklivesmatter'}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link href="./app.css" rel="stylesheet" />
         </head>
