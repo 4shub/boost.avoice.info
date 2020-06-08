@@ -1,17 +1,16 @@
 import React from "react";
-import {getCurrentPath} from "../app.helpers";
 import {ALL_ALERTS} from "../app.alerts";
 
-const Alert = ({ currentPath }: { currentPath: string }) => {
+const Alert = ({ currentPath, children }: { currentPath: string, children?: any }) => {
     try {
         const alert = ALL_ALERTS[currentPath];
 
         if (!alert) {
-            return null;
+            return children ? <div className="alert">{children}</div> : null;
         }
 
         return (
-            <div className="alert">UPDATE: All four officers involved with George Floyd's murder have been charged, and the case has moved to the Minnesota Attorney General.</div>
+            <div className="alert">{alert}</div>
         );
     } catch (e) {
         return null;

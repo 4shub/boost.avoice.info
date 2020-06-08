@@ -24,6 +24,7 @@ app.get('/:service', (req: Request, res: Response) => {
     }
 
     const payload: AppProps = {
+        host,
         currentPath: req.params.service,
         cities: host === 'boost' ? Object.keys(templates[host]) : [],
         emailTemplates: template.data,

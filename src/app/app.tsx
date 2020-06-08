@@ -29,6 +29,12 @@ const App = (props: AppProps) => (
                 </ul>
             </nav>
             <Alert currentPath={props.currentPath} />
+            {props.host === 'local' && (
+                <Alert currentPath={props.currentPath}>
+                    This email was created by and for the local community members of {props.currentPath}. There may be some
+                    specificities in these emails that might not translate to an non-local crowd.
+                </Alert>
+            )}
             <h1>✊ #BlackLivesMatter</h1>
         </header>
         <main>

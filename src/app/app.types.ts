@@ -4,4 +4,5 @@ export type AppProps = {
     emailTemplates: TemplateDataGroup;
     currentPath: string;
     cities: string[];
+    host: string;
 };
