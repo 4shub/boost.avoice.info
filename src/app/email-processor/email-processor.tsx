@@ -160,7 +160,7 @@ const EmailProcessor = ({ emailTemplates }: EmailProcessorProps) => {
             {step >= 2 && (
                 <div className="send-button-container">
                     <div className="button-holder">
-                        {body.length <= 4000 && (
+                        {body.length <= 6500 && (
                             <a
                                 onClick={() => setNextStep(3)}
                                 rel="noreferrer"
