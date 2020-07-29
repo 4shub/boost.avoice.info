@@ -13,6 +13,7 @@
         "build:server": "tsc --project tsconfig.json",
         "build:templates": "ts-node ./src/template-builder"
     },
+    "type": "module",
     "author": "",
     "license": "MIT",
     "devDependencies": {
