@@ -12,8 +12,20 @@ const getBody = (template: string) => template.split('BODY:')[1].trim();
 
 const getMetaHeadingText = (rawMetadata: string) => clearExtract(rawMetadata.match(/TITLE:(.+?)[\r\n]/));
 const getMetaBodyText = (rawMetadata: string) => rawMetadata.split('SUMMARY:')[1].trim();
-const getMetaSEODescription = (rawMetadata: string) => rawMetadata.split('META_DESCRIPTION:')[1].trim();
-const getMetaSEOImage = (rawMetadata: string) => rawMetadata.split('SEO_IMAGE:')[1].trim();
+const getMetaSEODescription = (rawMetadata: string) => {
+    try {
+        return rawMetadata.split('META_DESCRIPTION:')[1].trim()
+    } catch (e) {
+        return '';
+    }
+};
+const getMetaSEOImage = (rawMetadata: string) => {
+    try {
+        return rawMetadata.split('SEO_IMAGE:')[1].trim()
+    } catch (e) {
+        return '';
+    }
+};
 
 
 export const extractTemplateData = (template: string): TemplateData => {
