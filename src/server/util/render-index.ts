@@ -3,11 +3,22 @@ import { AppProps } from '../../app/app.types';
 export const embedJSON = (title: string, obj: Record<any, any>) =>
     obj ? `window.__${title}__ = ${JSON.stringify(obj).replace(/</g, '\\\u003c')};` : '';
 
-const renderIndex = (content: string, payload: AppProps) => `
+const renderIndex = (content: string, payload: AppProps) => {
+    const seoDescription = payload.metadata?.metaDescriptionText || payload.metadata?.bodyText.slice(0, 150);
+    const seoImage = payload.metadata?.metaImageUrl;
+    return `
     <html lang="en">
         <head>
             <title>${payload.metadata?.headingText || '#blacklivesmatter'}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="${seoDescription}">
+            <meta property="og:description" content="${seoDescription}">
+            <meta property="twitter:description" content="${seoDescription}">
+            ${seoImage ? `
+                <meta property="og:image" content="${seoImage}">
+                <meta property="twitter:image" content="${seoImage}">
+            ` : ''}\
+            
             <link href="./app.css" rel="stylesheet" />
         </head>
         <body>  
@@ -37,5 +48,6 @@ const renderIndex = (content: string, payload: AppProps) => `
         </body>
     </html>
 `;
+}
 
 export default renderIndex;
