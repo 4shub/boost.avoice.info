@@ -4,7 +4,7 @@ export const embedJSON = (title: string, obj: Record<any, any>) =>
     obj ? `window.__${title}__ = ${JSON.stringify(obj).replace(/</g, '\\\u003c')};` : '';
 
 const renderIndex = (content: string, payload: AppProps) => {
-    const seoDescription = payload.metadata?.metaDescriptionText || payload.metadata?.bodyText.slice(0, 150);
+    const seoDescription = payload.metadata?.metaDescriptionText || payload.metadata?.bodyText?.slice(0, 150);
     const seoImage = payload.metadata?.metaImageUrl;
     return `
     <html lang="en">
