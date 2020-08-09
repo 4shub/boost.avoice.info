@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-TITLE: Senator Durbin
-=======
 TITLE: Senator Durbin (IL)
->>>>>>> b11a475... Added SEO, and ReadME
 EMAIL: info@dickdurbin.com
 SUBJECT_LINE: Passing Bill S386
 
