@@ -20,4 +20,6 @@ export type TemplateGroups = {
 export type TemplateMetadata = {
     headingText: string;
     bodyText: string;
+    metaDescriptionText: string;
+    metaImageUrl: string;
 }
