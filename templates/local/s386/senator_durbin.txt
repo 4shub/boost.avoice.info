@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 TITLE: Senator Durbin (IL)
-=======
-<<<<<<< HEAD
-TITLE: Senator Durbin (IL)
-=======
-TITLE: Senator Durbin
->>>>>>> upstream/master
->>>>>>> 72958e0a8c1164f32cf4d070f2b178e76161f538
 EMAIL: info@dickdurbin.com
 SUBJECT_LINE: Passing Bill S386
 
