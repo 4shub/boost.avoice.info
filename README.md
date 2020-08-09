@@ -51,6 +51,10 @@ Emails can be edited with limited programming experience and some familiarity wi
 2. (Optional) Create a file called `METADATA` in your folder to control the title and summary of this initative. Use the following structure:
     ```
     TITLE: The title of your initiative, will default to #blacklivesmatter if not included
+
+    SEO_IMAGE: Your SEO Image for Search Engines and sharing on Social Media
+    SEO_DESCRIPTION: The meta html description
+
     SUMMARY:
     Summary/description of your initiative goes here. This will default to the text seen on `https://boost.avoice.info/minneapolis` if not included.
    ```
