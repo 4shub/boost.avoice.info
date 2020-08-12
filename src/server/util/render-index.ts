@@ -4,16 +4,24 @@ export const embedJSON = (title: string, obj: Record<any, any>) =>
     obj ? `window.__${title}__ = ${JSON.stringify(obj).replace(/</g, '\\\u003c')};` : '';
 
 const renderIndex = (content: string, payload: AppProps) => {
-    const seoDescription = payload.metadata?.metaDescriptionText || payload.metadata?.bodyText?.slice(0, 150);
+    const seoDescription = (() => {
+        try {
+            return payload.metadata?.metaDescriptionText || payload.metadata?.bodyText?.slice(0, 150)
+        } catch (e) {
+            return '';
+        }
+    });
     const seoImage = payload.metadata?.metaImageUrl;
     return `
     <html lang="en">
         <head>
             <title>${payload.metadata?.headingText || '#blacklivesmatter'}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta name="description" content="${seoDescription}">
-            <meta property="og:description" content="${seoDescription}">
-            <meta property="twitter:description" content="${seoDescription}">
+            ${seoDescription ? `
+                <meta name="description" content="${seoDescription}">
+                <meta property="og:description" content="${seoDescription}">
+                <meta property="twitter:description" content="${seoDescription}">
+            `: ''}
             ${seoImage ? `
                 <meta property="og:image" content="${seoImage}">
                 <meta property="twitter:image" content="${seoImage}">
