@@ -1,0 +1,19 @@
+TITLE: Senator Scott (FL)
+EMAIL: help@rickscott.senate.gov
+SUBJECT_LINE: Passing Bill S386
+
+BODY:
+Dear Senator Rick Scott, 
+
+
+My name is ${firstName}${lastName}, and I am emailing you about a very important issue to me that affects many people I know and many of your constituents in the state of Florida. Over 1 million legal immigrants are stuck in the employment-based green card backlog and the wait time for some immigrants could be up to 150 years! This is why I urge you to support bipartisan senate bill S.386.
+
+
+This bill will make our immigration system more fair by removing the arbitrary country-cap on the issuing of employment-based green cards. It will protect and benefit American workers by ending the abuse and outsourcing of H1Bs visas through the 50-50 rule. Finally, it will provide relief to the many backlogged immigrants and their family members and not increase the number of green cards or visas issued annually. 
+
+
+
+The amendments you want to add to the bill are not equitable and fair. We ought to issue green cards to immigrants not based on their nation of origin nor their native language. Bill S386 already will ensure immigrants from lesser populated countries are reserved green cards over a nine year period. Please stand alongside your fellow Senators who support and cosponsor S.386 and help make a vital reform to our immigration system,
+
+Thank you for your time, 
+${firstName}${lastName}
