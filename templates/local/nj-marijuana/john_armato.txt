@@ -1,9 +1,10 @@
-TITLE: Senator Scott (FL)
+TITLE: John Armato
 EMAIL: AsmArmato@njleg.org
 SUBJECT_LINE: Passing Bill S386
 
 BODY:
 To my representatives:
+
 My name is ${firstName} ${lastName}. I live in ${city}, ${region}, and I write regarding S21/A21: New Jersey Cannabis Regulatory, Enforcement Assistance, and Marketplace Modernization Act. I am in support of legalizing marijuana and the implications for racial and class justice which can come as a result, but I implore you-- as my representatives-- to make changes to this bill regarding how it is currently written. In the early lines of the bill itself, it reads “This act is designed to eliminate the problems caused by the unregulated manufacture, distribution, and use of illegal marijuana within New Jersey,” yet many of the problems caused by marijuana being made illegal for decades are not addressed or are addressed inadequately throughout this bill.
 
 Firstly, it is abhorrent for the state to use tax revenue from marijuana sales to fund local police departments. Communities affected by the War on Drugs are predominantly Black and brown, poor, urban areas which have consistently, and still are, overpoliced-- some of which are referred to as impact zones in this bill. Instead of continuing to fund local police departments which have historically been harmful towards these communities, funds should be redirected towards these communities and impact zones for rehabilitation, mental health services, employment opportunities, housing justice, welfare programs, and/or education. Revenue needs to be redirected back into communities and citizens, not law enforcement which, in FY 2020, received $448.8 million for the Division of State Police (DSP) from the state. A majority of local municipalities have increased their funding since the year prior, just as the DSP had. The police do not need this revenue, the people do.
