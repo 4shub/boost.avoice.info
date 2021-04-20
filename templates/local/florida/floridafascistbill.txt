@@ -1,0 +1,8 @@
+TITLE: Governor Ron DeSantis
+EMAIL: governorron.desantis@eog.myflorida.com
+SUBJECT_LINE: Drop Proposed Policing Bill 
+BODY:
+Dear Governor DeSantis:
+
+I am a resident of ${city}, ${region} writing to demand that the proposed “Combatting Violence, Disorder, and Looting and Law Enforcement Protection Act” be dropped as proposed legislation. This piece of legislation seeks to further criminalise and punish all forms of protests, as well as anyone who criticizes police misconduct. According to a September 2020 report published by the U.S. Crisis Project, 93% of BLM protests have been peaceful. Many of the “laws” discussed within the proposed legislation are already illegal in Florida. The way the legislation is worded makes it clear that any voice of opposition should be silenced. This bill is already being used to incite violence against people exercising their constitutional right to freedom of speech. This legislation would make Florida a police state and we will not allow that to happen. Drop the proposal now!!
+Sincerely,  ${firstName} ${lastName} 
